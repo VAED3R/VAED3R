@@ -18,7 +18,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('retro.jpg'); /* Replace with the path to your background image */
+      background-image: url('C:/Users/user/Desktop/website/retro.jpg');
       background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -33,23 +33,35 @@
       flex-direction: column;
       height: 100%;
     }
+    
+    .poster {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 50px;
+      border-radius: 10px;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+	flex-direction: column;
+      margin-top: 20px; /* Add spacing between the poster and buttons */
 
     .button {
-      padding: 35px 50px;
-      font-size: 30px;
-      border-radius: 20px; /* Adjust the value to control the roundness */
-      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4); /* Adjust the values for the desired shadow effect */
-      background-color: #9144A6; /* Change the color code to your desired color */
-      color: #012326; /* Change the text color to provide contrast */
-      margin: 10px; /* Add margin to create spacing between buttons */
+      padding: 10px 20px;
+      font-size: 24px;
+      width: 300px;
+      height: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+      background-color: #c280ba;
+      color: #edc7b2;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
 	transition: background-color 0.3s ease;
-    }
-	/* Responsive styles for mobile devices */
-    @media (max-width: 768px) {
-      .button {
-        padding: 100px 150px;
-        font-size: 24px;
-      }
     }
   .button:hover {
       background-color: #5F3073; /* Change the color code to the desired hover color */
@@ -57,15 +69,30 @@
 	</style>
 </head>
 <body>
-  <div class="parallax-container">
+<div class="parallax-container">
     <div class="parallax"></div>
     <div class="center">
-      <a href="https://www.instagram.com/jishnu_owo/">
-        <button class="button" type="button">Instagram</button>
-      </a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D">
-        <button class="button" type="button">Surprise</button>
-      </a>
+      <div class="poster">
+	  <div class="text-container">
+	  <h1 style="color: #FFFFFF; font-family: Arial, sans-serif;">Welcome to My Website</h1>
+        <div class="button-container">
+          <div>
+            <a href="https://www.instagram.com/jishnu_owo/">
+              <button class="button" type="button">INSTAGRAM</button>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/VAED3R">
+              <button class="button" type="button">GITHUB</button>
+            </a>
+          </div>
+		 <div>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D">
+              <button class="button" type="button">SURPRISE</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
