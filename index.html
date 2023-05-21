@@ -3,9 +3,11 @@
 <head>
   <title>My socials</title>
   <style>
-	body {
-      margin: 0; /* Remove default margin */
+    body {
+      margin: 0;
+      overflow: hidden;
     }
+
     .parallax-container {
       position: relative;
       height: 100vh;
@@ -20,10 +22,23 @@
       height: 100%;
       background-image: url('retro.jpg');
       background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
       transform: translateZ(0);
       z-index: -1;
+      animation: animateHue 10s linear infinite;
+    }
+
+    @keyframes animateHue {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      50% {
+        filter: hue-rotate(30deg);
+      }
+	100% {
+        filter: hue-rotate(0deg);
+      }
     }
 
     .center {
@@ -38,53 +53,52 @@
       background-color: rgba(0, 0, 0, 0.1);
       padding: 50px;
       border-radius: 10px;
-	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-	background: Orgba(255, 255, 255, 8.1);
-	overflow: hidden;
-	display: flex;
-	border-top: 1px solid rgba(255, 255, 255, 0.5); border-left: 1px solid rgba(255, 255, 255, 8.5);
-	border-left: 1px solid rgba(255, 255, 255, 0.5); border-left: 1px solid rgba(255, 255, 255, 8.5);
-	backdrop-filter: blur(2.5px);
+      box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2.5px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
     
     .button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px; /* Add spacing between the poster and buttons */
-}
-
-.button-container a {
-  text-decoration: none; /* Remove underline from the buttons */
-}
-
-.button-container a:hover {
-  text-decoration: none; /* Remove underline when hovering over the buttons */
-}
-
-.button {
-  padding: 10px 20px;
-  font-size: 24px;
-  width: 300px;
-  height: 50px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
-  background-color: #c280ba;
-  color: #edc7b2;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-  .button:hover {
-      background-color: #5F3073; /* Change the color code to the desired hover color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 20px;
     }
-	</style>
+
+    .button-container a {
+      text-decoration: none;
+    }
+
+    .button-container a:hover {
+      text-decoration: none;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 24px;
+      width: 300px;
+      height: 50px;
+      border-radius: 10px;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+      background-color: #c280ba;
+      color: #edc7b2;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #5F3073;
+    }
+  </style>
 </head>
 <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
 <script type="module">
@@ -92,32 +106,29 @@
 
   new ghostCursor();
 </script>
-
-
-
-
 <body>
-<div class="parallax-container">
+  <div class="parallax-container">
     <div class="parallax"></div>
     <div class="center">
       <div class="poster">
-	  <div class="text-container">
-	  <h1 align="center" style="color: #FFFFFF; font-family: Arial, sans-serif;">MY SOCIALS</h1>
-        <div class="button-container">
-          <div>
-            <a href="https://www.instagram.com/jishnu_owo/">
-              <button class="button" type="button">INSTAGRAM</button>
-            </a>
-          </div>
-          <div>
-            <a href="https://github.com/VAED3R">
-              <button class="button" type="button">GITHUB</button>
-            </a>
-          </div>
-		 <div>
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D">
-              <button class="button" type="button">SURPRISE</button>
-            </a>
+        <div class="text-container">
+          <h1 align="center" style="color: #FFFFFF; font-family: Arial, sans-serif;">MY SOCIALS</h1>
+          <div class="button-container">
+            <div>
+              <a href="https://www.instagram.com/jishnu_owo/">
+                <button class="button" type="button">INSTAGRAM</button>
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/VAED3R">
+                <button class="button" type="button">GITHUB</button>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D">
+                <button class="button" type="button">SURPRISE</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
